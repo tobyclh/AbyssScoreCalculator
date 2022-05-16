@@ -12,8 +12,10 @@ for i in range(len(lines)//2):
 five_star_char = ['Kazuha', 'Kokomi', 'Ayaka', 'Venti', 'Ayato', 'Ganyu', 'Shenhe', 'Shougun', 'Zhongli', 'Mona', 'Yae', 'Tartaglia', 'Hutao', 'Jean', 'Eula', 'Xiao', 'Albedo', 'Itto', 'Yoimiya', 'Klee', 'Qiqi', 'Keqing', 'Diluc']
 # rates['X'] = 0
 # print(rates)
-cons_factor = st.sidebar.slider('Constellation factor', 1.0, 3.0, 1.1)
-weapon_factor = st.sidebar.slider('Weapon factor', 0.0, 2.0, 0.5)
+# cons_factor = st.sidebar.slider('Constellation factor', 1.0, 3.0, 1.1)
+cons_factor = 1.2
+# weapon_factor = st.sidebar.slider('Weapon factor', 0.0, 2.0, 0.5)
+weapon_factor = 0.3
 total_cost = 0
 st.markdown('## Team 1')
 cols = st.columns(4)
