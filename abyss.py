@@ -24,10 +24,10 @@ for i, col in enumerate(cols):
     cost = rates[name] * five_star_weapon
     if name in five_star_char:
         cost *= (cons_factor**cons)
-    col.write(f'Cost: {cost}')
+    col.write(f'Cost: {cost:.2f}')
     total_cost += cost
     team_1_cost += cost
-st.markdown(f'### Team 1 cost: {team_1_cost}')
+st.markdown(f'### Team 1 cost: {team_1_cost:.2f}')
 
 st.markdown('## Team 2')
 cols = st.columns(4)
@@ -39,8 +39,8 @@ for i, col in enumerate(cols):
     cost = rates[name] * five_star_weapon
     if name in five_star_char:
         cost *= (cons_factor**cons)
-    col.write(f'Cost: {cost}')
+    col.write(f'Cost: {cost:.2f}')
     total_cost += cost
     team_2_cost += cost
-st.markdown(f'### Team 2 cost: {team_2_cost}')
-st.markdown(f'## Total cost: {total_cost}')
+st.markdown(f'### Team 2 cost: {team_2_cost:.2f}')
+st.markdown(f'## Total cost: {total_cost:.2f}')
