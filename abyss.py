@@ -13,6 +13,7 @@ five_star_char = ['Kazuha', 'Kokomi', 'Ayaka', 'Venti', 'Ayato', 'Ganyu', 'Shenh
 # rates['X'] = 0
 # print(rates)
 cons_factor = st.sidebar.slider('Constellation factor', 1.0, 3.0, 1.1)
+weapon_factor = st.sidebar.slider('Weapon factor', 0.0, 2.0, 0.5)
 total_cost = 0
 st.markdown('## Team 1')
 cols = st.columns(4)
@@ -20,7 +21,7 @@ team_1_cost = 0
 for i, col in enumerate(cols):
     name = col.selectbox(f'Team 1 Character {i+1}', names)
     cons = col.number_input(f'Team 1 Constellation {i+1}', 0, 6, 0)
-    five_star_weapon = int(col.checkbox(f'Team 1 5* Weapon {i+1}')) * 0.5 + 1
+    five_star_weapon = int(col.checkbox(f'Team 1 5* Weapon {i+1}')) * weapon_factor + 1
     cost = rates[name] * five_star_weapon
     if name in five_star_char:
         cost *= (cons_factor**cons)
@@ -35,7 +36,7 @@ team_2_cost = 0
 for i, col in enumerate(cols):
     name = col.selectbox(f'Team 2 Character {i+1}', names)
     cons = col.number_input(f'Team 2 Constellation {i+1}', 0, 6, 0)
-    five_star_weapon = int(col.checkbox(f'Team 2 5* Weapon {i+1}')) * 0.5 + 1
+    five_star_weapon = int(col.checkbox(f'Team 2 5* Weapon {i+1}')) * weapon_factor + 1
     cost = rates[name] * five_star_weapon
     if name in five_star_char:
         cost *= (cons_factor**cons)
