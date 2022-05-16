@@ -9,7 +9,7 @@ for i in range(len(lines)//2):
     names.append(name)
     rates[name] = float(rate)
 
-five_star_char = ['Kazuha', 'Kokomi', 'Ayaka', 'Venti', 'Ayato', 'Ganyu', 'Shenhe', 'Shougun', 'Bennett', 'Zhongli', 'Mona', 'Yae', 'Tartaglia', 'Hutao', 'Jean', 'Eula', 'Xiao', 'Albedo', 'Itto', 'Yoimiya', 'Klee', 'Qiqi', 'Keqing', 'Diluc']
+five_star_char = ['Kazuha', 'Kokomi', 'Ayaka', 'Venti', 'Ayato', 'Ganyu', 'Shenhe', 'Shougun', 'Zhongli', 'Mona', 'Yae', 'Tartaglia', 'Hutao', 'Jean', 'Eula', 'Xiao', 'Albedo', 'Itto', 'Yoimiya', 'Klee', 'Qiqi', 'Keqing', 'Diluc']
 # rates['X'] = 0
 # print(rates)
 cons_factor = 1.2
